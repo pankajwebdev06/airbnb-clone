@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 import AccountNav from "../AccountNav";
 import axios from "axios";
 import PlaceImg from "../PlaceImg";

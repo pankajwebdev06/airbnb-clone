@@ -1,4 +1,4 @@
-import { useState } from "react";
+import React, { useState } from "react";
 import ImageHandler from "./ImageHandler";
 
 export default function PlaceGallery({ place }) {

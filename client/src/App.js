@@ -1,3 +1,4 @@
+import React from 'react';
 import './App.css';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import IndexPage from './pages/IndexPage';
@@ -13,7 +14,7 @@ import PlacePage from './pages/PlacePage';
 import BookingsPage from './pages/BookingsPage';
 import BookingPage from './pages/BookingPage';
 
-axios.defaults.baseURL = import.meta.env.REACT_API_BASE_URL;
+axios.defaults.baseURL = import.meta.env.REACT_BASE_URL;
 axios.defaults.withCredentials = true;
 
 function App() {

@@ -1,3 +1,4 @@
+import React from "react";
 export default function AddressLink({ children, className = null }) {
     if (!className) {
         className = ' my-3 block';

@@ -1,11 +1,11 @@
-import { createContext, useState, useEffect } from 'react';
+import React, { createContext, useState, useEffect } from 'react';
 import axios from 'axios';
 
 export const UserContext = createContext({});
 
 export function UserContextProvider({ children }) {
     const [user, setUser] = useState(null);
-    const [ready,setReady] = useState(false);
+    const [ready, setReady] = useState(false);
     useEffect((user) => {
         if (!user) {
             axios.get('/profile').then(({ data }) => {
@@ -16,7 +16,7 @@ export function UserContextProvider({ children }) {
 
     }, []);
     return (
-        <UserContext.Provider value={{user,setUser,ready}} >
+        <UserContext.Provider value={{ user, setUser, ready }} >
             {children}
         </UserContext.Provider>
     );

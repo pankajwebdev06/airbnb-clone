@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 import axios from 'axios';
 import PhotosUploader from "../PhotosUploader";
 import Perks from "../Perks";

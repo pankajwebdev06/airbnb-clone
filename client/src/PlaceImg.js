@@ -1,3 +1,4 @@
+import React from "react";
 import ImageHandler from "./ImageHandler";
 
 export default function PlaceImg({ place, index = 0, className = null }) {
