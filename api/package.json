@@ -18,7 +18,8 @@
   "main": "index.js",
   "scripts": {
     "dev": "nodemon index.js",
-    "build": "npm install"
+    "build": "npm install",
+    "start": "node index.js"
   },
   "keywords": [],
   "author": "Pankaj Kumar",
