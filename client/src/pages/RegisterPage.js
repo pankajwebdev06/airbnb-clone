@@ -16,7 +16,7 @@ const RegisterPage = () => {
                 email,
                 password,
             });
-            alert('Registration Sucessfull');
+            alert('Registration Successful');
         } catch (e) {
             alert('Registration failed, try after some time');
         }
