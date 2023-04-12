@@ -124,13 +124,13 @@ app.post('/upload-by-link', async (req, res) => {
     const newName = 'photo' + Date.now() + '.jpg';
     await imageDownloader.image({
         url: link,
-        dest: '/temp/' + newName,
+        dest: '/tempdata/' + newName,
     });
-    const url = await uploadToS3('/temp/' + newName, newName, mime.lookup('/temp/' + newName));
+    const url = await uploadToS3('/tempdata/' + newName, newName, mime.lookup('/tempdata/' + newName));
     res.json(url);
 });
 
-const photosMiddleware = multer({ dest: '/temp' })
+const photosMiddleware = multer({ dest: '/tempdata' })
 app.post('/upload', photosMiddleware.array('photos', 100), async (req, res) => {
     mongoose.connect(process.env.MONGO_URL);
     const uploadedFiles = [];
